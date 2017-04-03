@@ -71,7 +71,7 @@ namespace clases
                     await child.DeleteAsync();
                     //jugador.Id = p1.Key;
                 }
-*/
+/*
 
      /*           //sin implementar, setear puntos de la liga actual para el jugador
                 public static async Task setPuntosJugadorFB(Jugador j)

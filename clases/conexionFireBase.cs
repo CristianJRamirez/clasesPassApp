@@ -39,28 +39,28 @@ namespace clases
             /// <returns></returns>
             public static async Task getJugadoresFB()
             {
-                //if (personas == null)
-                //{
-                //    personas = new List<DatosPersona>();
-                //}
+                if (personas == null)
+                {
+                    personas = new List<DatosPersona>();
+                }
 
-                //var firebase = new FirebaseClient(conexion);
+                var firebase = new FirebaseClient(conexion);
 
-                //var listpersonas = await firebase.Child("Personas").OnceAsync<DatosPersona>();
+                var listpersonas = await firebase.Child("Personas").OnceAsync<DatosPersona>();
 
 
-                //// string msg = "";
+                // string msg = "";
 
-                ////List<Jugador> players = new List<Jugador>();
+                //List<Jugador> players = new List<Jugador>();
 
-                //foreach (var p1 in listpersonas)
-                //{
-                //    Page p = p1.Object;
-                //    personas.Add(p);
-                //    // msg += j.Nombre + "\n";
-                //}
+                foreach (var p1 in listpersonas)
+                {
+                    DatosPersona p = p1.Object;
+                    personas.Add(p);
+                    // msg += j.Nombre + "\n";
+                }
 
-                //return players;
+                
             }
 
             /*  public static async Task deleteJugadores(Jugador j)
